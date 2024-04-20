@@ -1,4 +1,4 @@
-import os.path 
+import os.path
 import sys
 import yaml
 import base64
@@ -32,7 +32,7 @@ def write_yaml_file(file_path: str, content: object, replace: bool = False) -> N
     except Exception as e:
         raise AppException(e, sys)
     
-    
+
 def decodeImage(imgstring, fileName):
     imgdata = base64.b64decode(imgstring)
     with open("./data/" + fileName, 'wb') as f:
